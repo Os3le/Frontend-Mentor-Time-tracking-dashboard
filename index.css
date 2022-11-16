@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;1,300;1,400&display=swap');
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Rubik', sans-serif;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+:root {
+    --1: hsl(246, 80%, 60%);
+    --2: hsl(15, 100%, 70%);
+    --3: hsl(195, 74%, 62%);
+    --4: hsl(348, 100%, 68%);
+    --5: hsl(145, 58%, 55%);
+    --6: hsl(264, 64%, 52%);
+    --7: hsl(43, 84%, 65%);
+    --8: hsl(226, 43%, 10%);
+    --9: hsl(235, 46%, 20%);
+    --10: hsl(235, 45%, 61%);
+    --11: hsl(236, 100%, 87%);
+    /* --12:;
+    --13:; */
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(226, 43%, 10%);
+    overflow-x: hidden;
+    place-items: center;
+}
+
+.center {
+    display: grid;
+    grid-template-columns: 70%;
+    grid-template-rows: repeat(7, minmax(10rem, 12rem));
+    justify-content: center;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+}
+
+.user {
+    border-radius: 10px;
+    /* border: 1px solid red; */
+    height: fit-content;
+    background-color: var(--9);
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.user-profile {
+    height: fit-content;
+    width: inherit;
+    /* border: 1px solid white/; */
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0;
+    border-radius: inherit;
+    background-color: hsl(246, 80%, 60%);
+}
+
+.margin {
+    border-radius: inherit;
+}
+
+.user-profile>img {
+    width: 3rem;
+    height: 3rem;
+    border: 3px solid white;
+    border-radius: 50px;
+}
+
+.timeframes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem 0 1rem 0;
+}
+
+.timeframes button {
+    background-color: inherit;
+    padding: 2px 20px;
+    outline: none;
+    border: none;
+    color: var(--10);
+}
+
+.timeframes button:is(:focus,
+:hover) {
+    color: white;
+}
+
+.outer {
+    height: 5rem;
+    width: 100%;
+    background-color: var(--2);
+    position: relative;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.outer:hover {
+    transform: scale(0.8, 0.8);
+}
+
+.outer2 {
+    background-color: var(--3);
+}
+
+.outer3 {
+    background-color: var(--4);
+}
+
+.outer4 {
+    background-color: var(--5);
+}
+
+.outer5 {
+    background-color: var(--6);
+}
+
+.outer6 {
+    background-color: var(--7);
+}
+
+.outer7 {
+    background-color: var(--3);
+}
+
+.box {
+    width: 100%;
+    height: auto;
+    top: 2rem;
+    border-radius: inherit;
+    /* border: 1px solid red; */
+    /* height: fit-content; */
+    background-color: var(--9);
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+.box .task-title,
+.box .time-duration {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box .time-in-hrs {
+    font-size: 35px;
+}
+
+.box .weeks {
+    font-size: 12px;
+}
+
+.icon {
+    width: 3rem;
+    float: right;
+    margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 400px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .center {
+        height: 50%;
+        width: 70%;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(4, 20%);
+        grid-template-rows: repeat(2, 0.8fr);
+        /* border: 2px solid white; */
+        justify-content: center;
+    }
+    .user {
+        height: 100%;
+        grid-column: 1/ 2;
+        margin-bottom: 0;
+        margin-top: 0;
+        grid-row: 1 / 3;
+    }
+    .box {
+        position: relative;
+        cursor: pointer;
+        height: 80%;
+        top: 20%;
+        border-radius: 9px;
+    }
+    .outer {
+        height: 100%;
+    }
+    .margin {
+        height: 65%;
+        background-color: hsl(246, 80%, 60%);
+        border-radius: inherit;
+    }
+    .user-profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 1rem;
+        align-items: flex-start;
+    }
+    .user-profile>img {
+        width: 3rem;
+        height: 3rem;
+        border: 3px solid white;
+        border-radius: 50px;
+    }
+    .timeframes {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    .timeframes button {
+        cursor: pointer;
+    }
+    .time-duration {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        gap: 10px;
+        text-align: left;
+    }
+    .time-duration .time-in-hrs {
+        font-size: xx-large;
+    }
+}
+
+
+/* COMPLETED */
