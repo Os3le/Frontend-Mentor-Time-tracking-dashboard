@@ -180,7 +180,7 @@
     margin-right: 0.5rem;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1400px) {
     .container {
         display: flex;
         flex-direction: column;
